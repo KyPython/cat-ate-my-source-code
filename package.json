@@ -1,0 +1,39 @@
+{
+  "name": "cat-ate-my-source-code",
+  "version": "1.0.0",
+  "description": "A pragmatic backup & restore CLI tool for code projects",
+  "main": "dist/cli.js",
+  "bin": {
+    "cat-ate-my-source-code": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/cli.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "backup",
+    "restore",
+    "cli",
+    "disaster-recovery"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.24",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
+
+
+

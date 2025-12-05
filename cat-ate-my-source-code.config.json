@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "name": "my-app",
+      "path": "/Users/me/dev/my-app",
+      "exclude": ["node_modules", ".git", "dist", "*.log"]
+    },
+    {
+      "name": "another-project",
+      "path": "./relative/path/to/project",
+      "exclude": ["node_modules", ".git"]
+    }
+  ],
+  "backupTargets": [
+    {
+      "name": "local-disk",
+      "type": "local",
+      "path": "/Users/me/backups"
+    },
+    {
+      "name": "remote-server",
+      "type": "remote",
+      "ssh": {
+        "host": "backup.example.com",
+        "user": "backup",
+        "port": 22,
+        "keyPath": "~/.ssh/id_rsa"
+      },
+      "path": "/backups/code"
+    }
+  ],
+  "retention": {
+    "maxBackupsPerProject": 10
+  },
+  "compression": false
+}
+
+
+
