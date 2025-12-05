@@ -4,7 +4,7 @@
   "description": "A pragmatic backup & restore CLI tool for code projects",
   "main": "dist/cli.js",
   "bin": {
-    "cat-ate-my-source-code": "./dist/cli.js"
+    "cat-ate-my-source-code": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -25,7 +25,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KyPython/cat-ate-my-source-code.git"
+    "url": "git+https://github.com/KyPython/cat-ate-my-source-code.git"
   },
   "bugs": {
     "url": "https://github.com/KyPython/cat-ate-my-source-code/issues"
@@ -52,6 +52,3 @@
     "typescript": "^5.3.3"
   }
 }
-
-
-
