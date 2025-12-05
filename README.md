@@ -17,15 +17,41 @@ A pragmatic backup & restore CLI tool for code projects, focused on disaster rec
 
 ## Installation
 
+### For End Users
+
+Install globally via npm:
+
 ```bash
+npm install -g cat-ate-my-source-code
+```
+
+After installation, use the CLI directly:
+
+```bash
+cat-ate-my-source-code backup --project my-app
+```
+
+**Or use without installation** (via npx):
+
+```bash
+npx cat-ate-my-source-code backup --project my-app
+```
+
+### For Developers
+
+Clone the repository and build from source:
+
+```bash
+git clone https://github.com/KyPython/cat-ate-my-source-code.git
+cd cat-ate-my-source-code
 npm install
 npm run build
 ```
 
-For global installation:
+For local development:
 
 ```bash
-npm link
+npm link  # Creates a global symlink to your local build
 ```
 
 ## Configuration
@@ -83,28 +109,22 @@ Create a configuration file in one of these locations:
 
 ### Backup Commands
 
-After building (`npm run build`), use the compiled CLI:
+Backup a specific project:
 
 ```bash
-node dist/cli.js backup --project my-app
-```
-
-Or during development with `ts-node`:
-
-```bash
-npm start -- backup --project my-app
+cat-ate-my-source-code backup --project my-app
 ```
 
 Backup all projects:
 
 ```bash
-node dist/cli.js backup --all
+cat-ate-my-source-code backup --all
 ```
 
 Dry-run to preview:
 
 ```bash
-node dist/cli.js backup --project my-app --dry-run
+cat-ate-my-source-code backup --project my-app --dry-run
 ```
 
 ### List Backups
@@ -112,13 +132,13 @@ node dist/cli.js backup --project my-app --dry-run
 List all backups for a project:
 
 ```bash
-node dist/cli.js list --project my-app
+cat-ate-my-source-code list --project my-app
 ```
 
 List backups for all projects:
 
 ```bash
-node dist/cli.js list
+cat-ate-my-source-code list
 ```
 
 ### Restore Commands
@@ -126,7 +146,7 @@ node dist/cli.js list
 Restore a backup to a destination:
 
 ```bash
-node dist/cli.js restore --project my-app --backup 2025-01-15T10-30-00Z --dest /tmp/restore-my-app
+cat-ate-my-source-code restore --project my-app --backup 2025-01-15T10-30-00Z --dest /tmp/restore-my-app
 ```
 
 **Note**: The restore command will not overwrite existing directories by default. Choose a destination that doesn't exist, or use `--in-place` (not yet implemented) with confirmation.
@@ -136,7 +156,7 @@ node dist/cli.js restore --project my-app --backup 2025-01-15T10-30-00Z --dest /
 Validate your configuration file:
 
 ```bash
-node dist/cli.js check
+cat-ate-my-source-code check
 ```
 
 ### Global Options
