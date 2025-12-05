@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/cat-ate-my-source-code.git"
+    "url": "https://github.com/KyPython/cat-ate-my-source-code.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/cat-ate-my-source-code/issues"
+    "url": "https://github.com/KyPython/cat-ate-my-source-code/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/cat-ate-my-source-code#readme",
+  "homepage": "https://github.com/KyPython/cat-ate-my-source-code#readme",
   "files": [
     "dist",
     "README.md",
